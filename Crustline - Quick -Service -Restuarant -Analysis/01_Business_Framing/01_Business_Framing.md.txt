@@ -1,0 +1,20 @@
+Business Problem:
+Crustline, a QSR chain operating since Jan 2024, had 3 of its 4 Mumbai branches — its highest-revenue outlets — shut down by the food safety government team due to hygiene violations (pest infestation, open drains, fungal growth, improper refrigeration, unclean surfaces, mismanaged ingredient expiry). These closures caused customer decline, profit decline, and reputational damage. Investigation revealed a structural blind spot: scheduled inspections (2-3/year) were known in advance to staff, allowing temporary clean-up that masked ongoing, real conditions. The company has since introduced random, unannounced secret inspections to get a true picture — but currently has no systematic way to use this combined inspection data to catch early warning signs before a branch reaches closure-level risk.
+
+Key Questions (success criteria):
+
+Which branches show early warning signs (severity-weighted, not just low scores) consistent with the same problems that caused the Mumbai closures?
+Does inspection type (scheduled vs. secret) reveal a meaningful score/finding gap for the same branch — proving that advance notice was masking real risk?
+Which specific checkpoint types (pest, drains, refrigeration, surfaces, expiry/storage) are most associated with repeat, escalating problems, versus one-off minor issues?
+Are newly-opened branches (Bangalore, 1 Pune branch) at different baseline risk due to limited inspection history, and how should that be handled rather than ignored?
+Would our proposed flag rule (1+ Critical, OR repeated Majors, in a recent window) have actually flagged the 3 closed Mumbai branches before they were shut down, if applied retroactively to their inspection history?
+
+Stakeholders:
+CEO, Operations team head, Food safety team, Branch manager, Branch head, Inspector (each needing a different slice — CEO wants the big picture / financial-reputational risk, branch manager wants the specific checklist to fix).
+
+Scope:
+
+In: Hygiene/food safety only — pest, drains, fungal growth, surface cleanliness, refrigeration, ingredient expiry/storage. All 16 branches (Mumbai 4 incl. 3 closed, Pune 3 incl. 1 new, Delhi 3, Bangalore 2 both new, Hyderabad 4). Both scheduled and secret inspections, both front-of-house and back-kitchen areas.
+Out: Sales/orders, customer feedback, staff attendance/training, menu data, financials, and employee/procurement fraud (parked separately, same reasoning as Veloura).
+
+Success looks like: A branch can be flagged high-risk using inspection signals (score + severity + inspector notes, across both inspection types) before it would have reached actual violation/closure point — validated specifically against the 3 closed Mumbai branches' real inspection history.
